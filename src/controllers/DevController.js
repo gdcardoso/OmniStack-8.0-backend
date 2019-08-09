@@ -11,8 +11,8 @@ module.exports = {
       $and: [
         //tem que conresponder a todas condicoes
         { _id: { $ne: user } }, // not equal - todos usuários que id nao seja igual
-        { _id: { $nin: loggedDev.like } }, // not in - mostra todos usuários que não tenham likes
-        { _id: { $nin: loggedDev.dislike } } // not in - mostra todos usuários que não tenham dislikes
+        { _id: { $nin: loggedDev.likes } }, // not in - mostra todos usuários que não tenham likes
+        { _id: { $nin: loggedDev.dislikes } } // not in - mostra todos usuários que não tenham dislikes
       ]
     });
 
