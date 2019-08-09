@@ -12,8 +12,8 @@ module.exports = {
       return res.status(400).json({ error: "Dev not exists" });
     }
 
-    if (targetDev.likes.include(loggedDev._id)) {
-      console.log("deu match");
+    if (targetDev.likes.includes(loggedDev._id)){
+      console.log("Deu Match");
     }
 
     loggedDev.likes.push(targetDev._id);
